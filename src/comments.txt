@@ -1,0 +1,129 @@
+// External users
+
+/* function Cinema(props) {
+  return (
+    <div style={stylingValue}>
+      <h2>Nayok: {props.nayok}</h2>
+      <h4>Nayika: {props.nayika}</h4>
+    </div>
+  );
+}
+
+function Friend(props) {
+  return (
+    <div style={stylingValue} className="person">
+      <h1>Name: {props.name}</h1>
+      <h5>Designation:{props.designation} </h5>
+      <h5>Address: {props.address}</h5>
+      <h5>Phone: {props.Phone}</h5>
+    </div>
+  );
+
+
+  <ul>
+        {friends.map((friend) => (
+          <li>{friend}</li>
+        ))}
+      </ul>
+      <Cinema nayok="Rubel" nayika="Moutusi" />
+      {cinemas.map((cinema) => <Cinema nayok={cinema.nayok} nayika={cinema.nayok}/>)}
+
+      const friends = ["Murad", "Bashar", "Foysal", "Durjoy", "Suborna"];
+
+      <Friend
+        name="Hasina Akter"
+        designation="Rabby's Suhasini"
+        address="Asmane"
+        Phone="018555555555"
+      ></Friend>
+      <Friend
+        name="Hasina Akter"
+        designation="Rabby's Suhasini"
+        address="Asmane"
+        Phone="018555555555"
+      ></Friend>
+
+
+      const cinemas = [
+    {
+      name: "Padma Nadir Maji",
+      nayok: "Kuber",
+      nayika: "Kopila",
+    },
+    {
+      name: "Padma Nadir Maji",
+      nayok: "Kuber",
+      nayika: "Kopila",
+    },
+    {
+      name: "Padma Nadir Maji",
+      nayok: "Kuber",
+      nayika: "Kopila",
+    },
+  ];
+} 
+
+
+function ExternalUsers() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    const url = "https://jsonplaceholder.typicode.com/users";
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setUsers(data));
+  }, []);
+  return (
+    <div>
+      <h3>External Users</h3>
+      {
+        users.map(user=> <li>Name: {user.name}</li>)
+      }
+    </div>
+  );
+}
+// Counter
+function Counter() {
+  const [count, setCount] = useState(0);
+  const handleIncrease = () => {
+    setCount(count + 1);
+  };
+  const handleDecrease = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
+  return (
+    <div style={stylingValue}>
+      <h1>Count: {count}</h1>
+      <button onClick={handleIncrease}>Increase</button>
+      <button onClick={handleDecrease}>Decrease</button>
+    </div>
+  );
+}
+
+ const articles = [
+    {
+      name: "Google",
+      desc: "Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.",
+    },
+    {
+      name: "Facebook",
+      desc: "Facebook, Inc., is an American multinational technology company based in Menlo Park, California. It was founded in 2004 as TheFacebook by Mark Zuckerberg, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes, roommates and students at Harvard College. ",
+    },
+  ];
+
+  {articles.map((article) => (
+        <Article name={article.name} decscription={article.desc} />
+      ))},
+
+      function Article(props) {
+  return (
+    <div>
+      <article>Article Name: {props.name}</article>
+      <article>Article About: {props.decscription}</article>
+    </div>
+  );
+}
+
+
+
